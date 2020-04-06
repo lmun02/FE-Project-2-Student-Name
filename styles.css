@@ -1,0 +1,253 @@
+/*===Base Element Styles===*/
+    /*---Web Fonts--*/
+    @font-face { /*embeded downlowded font files*/
+        src: url(fonts/Cuprum-Regular.ttf);
+        font-family: "Cuprum"
+        }  
+
+    * { 
+        box-sizing: border-box;
+      }
+    
+    /*==Base Layout Styles==*/
+    /*==Mobile layout==*/
+        /*---Navigation---*/
+        .col img {
+         width: 100%;
+            
+        }
+    
+        /*---Layout Containers---*/
+    
+        body {
+             text-align: center;
+             font-family: Cuprum;
+        }
+    
+        header{ 
+            background-color: rgb(233, 232, 220);
+            background-size: cover;
+        }
+
+        .main-header {
+            display:block;
+        }
+    
+        .name { /*Student Name*/
+            font-size: 2em;
+            padding-top: 20px;
+            margin-top: 0px;
+        }
+    
+        .main-nav li{ /*Links*/
+            color: black;
+            font-weight: bolder;
+            font-size: 1.15em;
+            text-transform: uppercase;
+            list-style: none;
+            border: 10px solid white; 
+            background-color: white;
+            margin: 10px;
+            padding: 10px 0px 10px 0px;
+        } 
+        .main-nav{ 
+            padding: 0px;
+        }
+    
+        a:visited {color: black;}
+    
+        a:hover {color: red;} /*-- hover needs to below visted inorder to wrok--*/
+
+        .bio{ /*Profile Img*/
+            display:inline-block;
+            padding: 30px 0px 15px 0px;
+            width: 200px; /*made a fix width to the profile image*/
+        }
+    
+        .profile-bio h4 { /*Profile Text*/
+            font-size: 20px;
+            font-weight: normal;
+            padding: 0px 20px 40px 20px;
+        }
+    
+        .heading { /*Portfolio Text*/
+            text-transform: uppercase;
+            margin: 30px 0px;
+        }
+    
+        .col { /*All the different Portfolio Info*/
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            display: inline-block;
+        }
+        
+        .contactcol{ /*Styling of Contact Portfolio*/
+            background-color: rgb(233, 232, 220);
+            background-size: cover;
+            margin-top: 0;
+            padding: 20px 30px;
+            font-size: 1em;
+            display: inline-block;
+            width: 100%;  
+        }
+
+        .contactcol li { /*Contact Col List*/
+            list-style:none;
+            padding-bottom: 20px;
+        }
+
+        ul { /*Contact Col- Links*/
+            padding: 0px;
+        }
+
+        .main-footer { /* Student Name and Top section*/
+            background-color: rgb(233, 232, 220);
+            background-size: cover;
+            display: inline;
+        }
+
+        .main-footer h3 {  /*Student Name Bottom Text*/
+            float: left;
+            padding-left: 5px;
+        }
+
+        .main-footer li { /* Return to Top*/
+            float: right;
+            text-transform: uppercase; 
+            padding-right: 5px;
+            color: black;
+            font-weight: bolder;
+            list-style: none;
+            margin: 18.72px 0px;
+        }
+        
+        .home, .port, .contact { /*This hides the main nav in the bottom and only shows the back to top nav*/
+            display: none; 
+        }
+
+        /*---Page Elements---*/
+    
+    /*===Media Queries===*/
+        @media (min-width: 768px) { /*Tablet layout*/
+            .container {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            header{
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .main-nav li {
+                display: inline-block;
+                text-align: center;
+                margin: 15px;
+                background-color: rgb(233, 232, 220);
+                border: none;
+            }
+
+            .profile-bio, .bio{
+                display: inline;
+            }
+
+            .bio{
+                float: right;
+                width: 40%;
+                padding: 15px
+            }
+
+            .profile-bio{
+                font-size: 1.25em;
+                padding: 15px;
+                display: block;
+                margin-top: 0px;
+            }
+
+            .col {
+                float: right;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+    
+            .first, .second,.third {
+                width:50%;
+            }
+            
+            .fourth, .fifth, .sixth {
+                width:50%;
+            }
+
+            .home, .port, .contact { 
+                display: block;
+                padding-right: 10px;
+            }
+
+            .return-to-top {
+                display: none;
+            }
+
+        }
+        @media (min-width: 1024px) {  /*desktop layout*/
+            
+            .name, .main-nav{
+                display:inline;
+                padding-top: 10px;
+            }
+
+            .name {
+                font-size: 1.5em;
+                float: left;
+                padding-left:50px;
+                padding-top: 20px;
+            }
+
+            .container2, .main-nav { /*Specifically moving main-nav in Container2*/
+                text-align: right;
+            }
+
+            .profile-bio, .bio{
+                display: inline-block;
+            }
+
+            .bio{
+                float: right;
+                width: 40%;
+                padding: 30px;
+            }
+
+            .profile-bio{
+                font-size: 1.25em;
+                padding: 30px;
+                display: block;
+                margin-top: 0px;
+            }
+            .col {
+                float: left;
+    
+            }
+    
+            .first, .second,.third {
+                width:33.3%;
+            }
+
+            .fourth, .fifth, .sixth {
+                width:33.3%;
+            }
+
+            .main-footer li{ display: block;}
+
+        }
+     /*---Float clearfix---*/
+        .clearfix::after {
+            content:"";
+            display: table;
+            clear: both;
+        }
+
+        
